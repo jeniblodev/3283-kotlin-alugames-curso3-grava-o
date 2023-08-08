@@ -15,10 +15,11 @@ data class Jogo(@Expose val titulo:String,
         listaNotas.add(nota)
     }
 
-    constructor(titulo: String, capa: String, preco: Double, descricao: String):
+    constructor(titulo: String, capa: String, preco: Double, descricao: String, id: Int):
             this(titulo, capa) {
         this.preco = preco
         this.descricao = descricao
+        this.id
     }
     override fun toString(): String {
         return "Meu Jogo: \n" +
