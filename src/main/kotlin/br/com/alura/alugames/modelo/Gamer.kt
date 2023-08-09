@@ -38,6 +38,7 @@ data class Gamer(var nome:String, var email:String): Recomendavel {
             this(nome, email) {
         this.dataNascimento = dataNascimento
         this.usuario = usuario
+        this.id = id
         criarIdInterno()
     }
 

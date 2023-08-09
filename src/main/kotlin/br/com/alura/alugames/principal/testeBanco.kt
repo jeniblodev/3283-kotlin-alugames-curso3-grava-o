@@ -1,7 +1,9 @@
 package br.com.alura.alugames.principal
 
 import br.com.alura.alugames.dados.Banco
+import br.com.alura.alugames.dados.GamersDAO
 import br.com.alura.alugames.dados.JogosDAO
+import br.com.alura.alugames.modelo.Gamer
 import br.com.alura.alugames.modelo.Jogo
 
 fun main() {
@@ -10,16 +12,17 @@ fun main() {
 
     val manager = Banco.getEntityManager()
     val jogoDAO = JogosDAO(manager)
-//    jogoDAO.adicionar(jogo2)
 
-//    val jogoRecuperado = jogoDAO.recuperarPeloId(6)
+//   jogoDAO.adicionar(jogo2)
+
+    val jogoRecuperado = jogoDAO.recuperarPeloId(6)
 //    println(jogoRecuperado)
 
-    jogoDAO.apagar(5)
-    jogoDAO.apagar(4)
+    jogoDAO.apagar(6)
 
-    val listaJogos: List<Jogo> = jogoDAO.getLista()
-    println(listaJogos)
+//
+//    val listaJogos: List<Jogo> = jogoDAO.getLista()
+//    println(listaJogos)
 
     manager.close()
 }
