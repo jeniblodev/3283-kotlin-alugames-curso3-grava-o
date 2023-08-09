@@ -25,7 +25,7 @@ data class Jogo(@Expose val titulo:String,
             this(titulo, capa) {
         this.preco = preco
         this.descricao = descricao
-        this.id
+        this.id = id
     }
     override fun toString(): String {
         return "Meu Jogo: \n" +
